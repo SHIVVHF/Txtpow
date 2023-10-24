@@ -98,8 +98,7 @@ class Upload_to_Tg:
                         file_name=f"{self.name}"), self.show_msg, start_time
                 )
             )
-            copy = await self.bot.send_document(chat_id=self.m.chat.id,document=self.file_path,caption=self.caption,thumb=thumbnail) #progress=progress_bar,progress_args=(reply,start_time))
-            await copy.copy(chat_id = LOG)  
+
         os.remove(self.file_path)       
         await self.show_msg.delete(True)
 
