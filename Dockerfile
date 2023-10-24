@@ -3,7 +3,6 @@ WORKDIR .
 COPY . .
 
 
-
 RUN cd /
 RUN pip install -U pip && pip install -U -r requirementsp.txt
 WORKDIR /app
