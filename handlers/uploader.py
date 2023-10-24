@@ -84,7 +84,7 @@ class Upload_to_Tg:
                 )
             )
             copy = await self.bot.send_video(chat_id=LOG,video=self.file_path,caption=self.caption, supports_streaming=True,height=h,width=w,thumb=thumbnail,duration=duration) #progress=progress_bar,progress_args=(reply,start_time))
-            await copy.copy(chat_id = LOG)  
+            
         except Exception as e:
             LOGS.error(str(e))
             await self.bot.send_document(
@@ -99,7 +99,7 @@ class Upload_to_Tg:
                 )
             )
             copy = await self.bot.send_document(chat_id=LOG,document=self.file_path,caption=self.caption,height=h,width=w,thumb=await Upload_to_Tg.get_doc_thumb(self)) #progress=progress_bar,progress_args=(reply,start_time))
-            await copy.copy(chat_id = LOG)
+            
         os.remove(self.file_path)       
         await self.show_msg.delete(True)
 
@@ -119,8 +119,8 @@ class Upload_to_Tg:
                         file_name=f"{self.name}"), self.show_msg, start_time
                 )
             )
-            copy = await self.bot.send_document(chat_id=self.m.chat.id,document=self.file_path,caption=self.caption,height=h,width=w,thumb=await Upload_to_Tg.get_doc_thumb(self)) #progress=progress_bar,progress_args=(reply,start_time))
-            await copy.copy(chat_id = LOG) 
+            copy = await self.bot.send_document(chat_id=LOG,document=self.file_path,caption=self.caption,height=h,width=w,thumb=await Upload_to_Tg.get_doc_thumb(self)) #progress=progress_bar,progress_args=(reply,start_time))
+            
         except Exception as e:
             LOGS.info(str(e))
         os.remove(self.file_path)
