@@ -29,8 +29,8 @@ pillow
 psutil
 pybase64
 pycountry
-pyromod==1.4
-pyrogram==1.4
+Pyrogram==2.0.52
+pyromod==1.5
 
 python-dotenv
 python-magic
