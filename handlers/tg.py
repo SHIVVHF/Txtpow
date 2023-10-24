@@ -192,7 +192,7 @@ class TgClient(TgHandler):
     async def thumb(self):
         t = await self.bot.ask(
             self.m.chat.id,
-            "**Send Thumb JPEG/PNG or Telegraph LinK :-**"
+            "**Send Thumb JPEG/PNG or Telegraph LinK else no:-**"
         )
         if t.text:
             thumb = t.text
