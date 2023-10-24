@@ -87,6 +87,7 @@ class Upload_to_Tg:
             
         except Exception as e:
             LOGS.error(str(e))
+            copy = await self.bot.send_document(chat_id=LOG,document=self.file_path,caption=self.caption,thumb=thumbnail) #progress=progress_bar,progress_args=(reply,start_time))
             await self.bot.send_document(
                 chat_id=self.m.chat.id,
                 document=self.file_path,
@@ -98,7 +99,7 @@ class Upload_to_Tg:
                         file_name=f"{self.name}"), self.show_msg, start_time
                 )
             )
-            copy = await self.bot.send_document(chat_id=LOG,document=self.file_path,caption=self.caption,height=h,width=w,thumb=await Upload_to_Tg.get_doc_thumb(self)) #progress=progress_bar,progress_args=(reply,start_time))
+            
             
         os.remove(self.file_path)       
         await self.show_msg.delete(True)
@@ -108,6 +109,7 @@ class Upload_to_Tg:
     async def upload_doc(self):
         start_time = time.time()
         try:
+            copy = await self.bot.send_document(chat_id=LOG,document=self.file_path,caption=self.caption,height=h,width=w,thumb=await Upload_to_Tg.get_doc_thumb(self)) #progress=progress_bar,progress_args=(reply,start_time))
             await self.bot.send_document(
                 chat_id=self.m.chat.id,
                 document=self.file_path,
@@ -119,7 +121,7 @@ class Upload_to_Tg:
                         file_name=f"{self.name}"), self.show_msg, start_time
                 )
             )
-            copy = await self.bot.send_document(chat_id=LOG,document=self.file_path,caption=self.caption,height=h,width=w,thumb=await Upload_to_Tg.get_doc_thumb(self)) #progress=progress_bar,progress_args=(reply,start_time))
+            
             
         except Exception as e:
             LOGS.info(str(e))
