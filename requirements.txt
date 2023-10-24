@@ -30,7 +30,7 @@ psutil
 pybase64
 pycountry
 pyromod==1.4
-pyrogram==2.0.106
+pyrogram==1.4
 
 python-dotenv
 python-magic
