@@ -1,7 +1,7 @@
 {
   "name": "pyro",
   "description": "Download videos from various websites using this telegram bot",
-  "repository": "https://github.com/SHIVVHF/Txtpow",
+  "repository": "https://github.com/SHIVVHF/Uplaa",
   "buildpacks": [
     {
       "url": "https://github.com/jonathanong/heroku-buildpack-ffmpeg-latest.git"
@@ -24,7 +24,7 @@
     },
     "BOT_TOKEN": {
       "description": "Get from BotFather",
-      "value": "6520935615:AAFk7p5weyTkHvaezjV3qBav3MbBFygqImk"
+      "value": "6274752151:AAFfCgIyZPbMl_bYIPoY8ry0WhvE3Gl5JPY"
     },
     "AUTH_USERS": {
       "description": "Admin/Owner/Friends ID Seperate by ','  Ex: 44578878,8878899",
@@ -32,7 +32,7 @@
     },
     "GROUPS": {
       "description": "Group Id",
-      "value": "-1001827442000"
+      "value": "-1001604599719"
     }
   }
 }
