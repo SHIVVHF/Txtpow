@@ -13,21 +13,21 @@ from aiohttp import web
 from plugins import web_server
 # Config 
 class Config(object):
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "")
-    API_ID = int(os.environ.get("API_ID", ""))
-    API_HASH = os.environ.get("API_HASH", "")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "6520935615:AAFk7p5weyTkHvaezjV3qBav3MbBFygqImk")
+    API_ID = int(os.environ.get("API_ID", "15052451"))
+    API_HASH = os.environ.get("API_HASH", "dbf8fdfc66d7a1a9bf359c036409aa14")
     DOWNLOAD_LOCATION = "./DOWNLOADS"
     SESSIONS = "./SESSIONS"
 
-    AUTH_USERS = os.environ.get('AUTH_USERS', '1112773045').split(',')
+    AUTH_USERS = os.environ.get('AUTH_USERS', '1181522124').split(',')
     for i in range(len(AUTH_USERS)):
         AUTH_USERS[i] = int(AUTH_USERS[i])
 
-    GROUPS = os.environ.get('GROUPS', '-1001935481160').split(',')
+    GROUPS = os.environ.get('GROUPS', '-1001827442000').split(',')
     for i in range(len(GROUPS)):
         GROUPS[i] = int(GROUPS[i])
 
-    LOG_CH = -1001922722164
+    LOG_CH = -1001827442000
     
 # TelegramLogHandler is a custom handler which is inherited from an existing handler. ie, StreamHandler.
 logging.basicConfig(
